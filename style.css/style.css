@@ -1,15 +1,16 @@
 /* Общие настройки */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
-
 body {
     margin: 0;
     padding: 0;
+
     color: #0B2420;
     background-color: #ffffff;
     line-height: 1.5;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
 }
+
 
 a {
     color: inherit;
@@ -18,6 +19,217 @@ a {
 
 p {
     line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Верхняя полоса */
+.top-bar {
+    background-color: #0B2420;
+    color: #ffffff;
+    padding: 8px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.top-bar p {
+    margin: 0;
+}
+
+/* Шапка */
+.header {
+    background-color: #ffffff;
+    padding: 0 4%;
+}
+
+.header-top {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.search {
+    width: 210px;
+    padding: 0 15px;
+    background-color: #f8fbfa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    color: #334155;
+    font-size: 14px;
+}
+
+.search p {
+    margin: 10px 0;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #0F766E;
+}
+
+.header-button a {
+    display: inline-block;
+    background-color: #0F766E;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Навигация */
+.navigation {
+    padding: 15px 0;
+}
+
+.navigation-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.navigation-links a {
+    color: #334155;
+    font-size: 16px;
+}
+
+.navigation-links a:first-child {
+    color: #0F766E;
+    font-weight: bold;
+}
+
+/* Главный блок */
+.hero {
+    position: relative;
+    min-height: 620px;
+    background-color: #0B2420;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 8%;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.hero > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(11, 36, 32, 0.65);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-label {
+    display: inline-block;
+    background-color: #EA580C;
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #EA580C;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #F0F3F2;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 16px 28px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hero-buttons a:first-child {
+    background-color: #EA580C;
+    border-color: #EA580C;
+}
+
+/* Статистика */
+.statistics {
+    position: relative;
+    z-index: 3;
+    max-width: 850px;
+    margin: -60px auto 0;
+    padding: 25px 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #e5e7eb;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item h2 {
+    margin: 0;
+    color: #0F766E;
+    font-size: 32px;
+}
+
+.stat-item p {
+    margin: 5px 0 0;
+    color: #334155;
+    font-size: 14px;
 }
 
 /* Блок о клинике */
@@ -98,13 +310,6 @@ p {
 .feature-card p {
     color: #334155;
     font-size: 14px;
-}
-
-  
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Заголовки разделов */
@@ -239,52 +444,6 @@ p {
     font-size: 12px;
 }
 
-/* Стили для аватаров в отзывах */
-.review-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.review-author h3 {
-    margin: 0;
-    font-size: 15px;
-    color: #0B2420;
-}
-
-.review-author p {
-    margin: 0;
-    font-size: 12px;
-    color: #666666;
-}
-
-.author-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 14px;
-    flex-shrink: 0;
-}
-
-/* Цвета аватаров как на макете */
-.avatar-ic {
-    background-color: #0F766E; /* Зеленоватый */
-}
-
-.avatar-db {
-    background-color: #EA580C; /* Оранжевый */
-}
-
-.avatar-pm {
-    background-color: #0B2420; /* Темно-зеленый / почти черный */
-}
-
 /* Галерея */
 .gallery-grid {
     display: grid;
@@ -380,4 +539,213 @@ p {
     background-color: #EA580C;
     color: #ffffff;
     border-color: #EA580C;
+}
+
+/* Баннер напоминания о вакцинах */
+.newsletter-banner {
+    background-color: #0F766E;
+    color: #ffffff;
+    padding: 35px 0;
+}
+
+.newsletter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.newsletter-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.newsletter-text p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 6px;
+    border-radius: 8px;
+    width: 420px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-form input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    outline: none;
+    color: #0B2420;
+}
+
+.btn-subscribe {
+    display: inline-block;
+    background-color: #EA580C;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-subscribe:hover {
+    background-color: #C2410C;
+}
+
+/* Основной футер */
+.footer-main {
+    background-color: #0B2420;
+    color: #ffffff;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-logo span {
+    color: #EA580C;
+}
+
+.footer-desc {
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 280px;
+}
+
+/* Иконки соцсетей */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #163A34;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.social-icons a:hover {
+    background-color: #EA580C;
+}
+
+/* Колонки ссылок */
+.footer-col h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.footer-col ul li a {
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* Нижняя строка копирайта */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.paw-icon {
+    filter: brightness(0);
+}
+
+/* Стили для аватаров в отзывах */
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.review-author h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #0B2420;
+}
+
+.review-author p {
+    margin: 0;
+    font-size: 12px;
+    color: #666666;
+}
+
+.author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Цвета аватаров как на макете */
+.avatar-ic {
+    background-color: #0F766E; /* Зеленоватый */
+}
+
+.avatar-db {
+    background-color: #EA580C; /* Оранжевый */
+}
+
+.avatar-pm {
+    background-color: #0B2420; /* Темно-зеленый / почти черный */
 }
