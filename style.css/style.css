@@ -100,56 +100,284 @@ p {
     font-size: 14px;
 }
 
-    <!-- Отзывы -->
-    <div class="reviews">
-
-        <p class="section-label">RECENZII</p>
-
-        <h2>Stăpâni liniștiți</h2>
-
-        <div class="reviews-grid">
-
-            <div class="review-card">
-                <p>★★★★★</p>
-                <p>Ne-au primit la 3 noaptea cu cățelul otrăvit și l-au salvat. Le datorăm totul.</p>
-                <div class="review-author">
-                    <div class="author-avatar avatar-ic">IC</div>
-                    <div>
-                        <h3>Igor Cojocaru</h3>
-                        <p>stăpânul lui Rex</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="review-card">
-                <p>★★★★★</p>
-                <p>Dr. Lungu e incredibil de răbdătoare cu pisica mea fricoasă.</p>
-                <div class="review-author">
-                    <div class="author-avatar avatar-db">DB</div>
-                    <div>
-                        <h3>Diana Botnaru</h3>
-                        <p>stăpâna Mițurei</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="review-card">
-                <p>★★★★★</p>
-                <p>Analizele au fost gata cât am băut o cafea în sala de așteptare.</p>
-                <div class="review-author">
-                    <div class="author-avatar avatar-pm">PM</div>
-                    <div>
-                        <h3>Pavel Melnic</h3>
-                        <p>stăpânul lui Bruno</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
+  
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Заголовки разделов */
+.services,
+.reviews,
+.gallery,
+.pricing {
+    padding: 70px 4%;
+}
+
+.services > .section-label,
+.reviews > .section-label,
+.gallery > .section-label,
+.pricing > .section-label {
+    text-align: center;
+}
+
+.services > h2,
+.reviews > h2,
+.gallery > h2,
+.pricing > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 10px 0;
+    color: #0B2420;
+}
+
+.services > p:not(.section-label),
+.pricing > p:not(.section-label) {
+    text-align: center;
+    color: #334155;
+    margin-bottom: 35px;
+}
+
+/* Карточки услуг */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.service-card > img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 18px;
+}
+
+.service-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #0B2420;
+}
+
+.service-content p {
+    font-size: 13px;
+    color: #334155;
+}
+
+.service-content p:nth-of-type(1) {
+    color: #EA580C;
+}
+
+.service-content p:nth-of-type(3) {
+    font-size: 18px;
+    color: #0F766E;
+    font-weight: bold;
+}
+
+.service-content a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #0F766E;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #EA580C;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Отзывы */
+.reviews {
+    background-color: #f8fbfa;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.review-card p:first-child {
+    color: #EA580C;
+}
+
+.review-card h3 {
+    font-size: 15px;
+    margin-top: 15px;
+    color: #0B2420;
+}
+
+.review-card p:last-child {
+    color: #334155;
+    font-size: 12px;
+}
+
+/* Стили для аватаров в отзывах */
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.review-author h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #0B2420;
+}
+
+.review-author p {
+    margin: 0;
+    font-size: 12px;
+    color: #666666;
+}
+
+.author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Цвета аватаров как на макете */
+.avatar-ic {
+    background-color: #0F766E; /* Зеленоватый */
+}
+
+.avatar-db {
+    background-color: #EA580C; /* Оранжевый */
+}
+
+.avatar-pm {
+    background-color: #0B2420; /* Темно-зеленый / почти черный */
+}
+
+/* Галерея */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr;
+    gap: 15px;
+    height: 320px;
+}
+
+.gallery-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Тарифы */
+.pricing {
+    background-color: #f8fbfa;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.price-card {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+.price-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price-card h2 {
+    font-size: 25px;
+    margin: 15px 0;
+    color: #0F766E;
+}
+
+.price-card h2 span {
+    font-size: 14px;
+    font-weight: normal;
+    color: inherit;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.price-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 13px;
+}
+
+.price-card > a {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #0F766E;
+    color: #0F766E;
+    border-radius: 6px;
+}
+
+.price-card:nth-child(2) {
+    background-color: #0B2420;
+    color: #ffffff;
+}
+
+.price-card:nth-child(2) h3,
+.price-card:nth-child(2) h2,
+.price-card:nth-child(2) li {
+    color: #ffffff;
+    border-bottom-color: #163A34;
+}
+
+.price-card:nth-child(2) a {
+    background-color: #EA580C;
+    color: #ffffff;
+    border-color: #EA580C;
 }
