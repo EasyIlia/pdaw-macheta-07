@@ -232,7 +232,7 @@ p {
     font-size: 14px;
 }
 
-/* Блок о клинике */
+/* Клиника */
 .about {
     background-color: #f8fbfa;
     padding: 60px 4%;
@@ -638,7 +638,7 @@ p {
     max-width: 280px;
 }
 
-/* Иконки соцсетей */
+/* Иконки отзывов */
 .social-icons {
     display: flex;
     gap: 10px;
@@ -704,7 +704,7 @@ p {
     filter: brightness(0);
 }
 
-/* Стили для аватаров в отзывах */
+/* Аватары в отзывах */
 .review-author {
     display: flex;
     align-items: center;
@@ -737,15 +737,57 @@ p {
     flex-shrink: 0;
 }
 
-/* Цвета аватаров как на макете */
+/* Цвета аватаров */
 .avatar-ic {
-    background-color: #0F766E; /* Зеленоватый */
+    background-color: #0F766E;
 }
 
 .avatar-db {
-    background-color: #EA580C; /* Оранжевый */
+    background-color: #EA580C; 
 }
 
 .avatar-pm {
-    background-color: #0B2420; /* Темно-зеленый / почти черный */
+    background-color: #0B2420; 
 }
+
+/* Липкая белая шапка */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 0 4%;
+
+}
+
+/* Кнопка экстренной связи */
+.fixed-emergency-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 22px;
+    background-color: #EA580C;
+    color: #ffffff;
+
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.fixed-emergency-btn:hover {
+    background-color: #C2410C;
+  
+}
+
+.fixed-emergency-btn .emergency-icon {
+    font-size: 16px;
+}
+
